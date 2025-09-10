@@ -1,0 +1,433 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+#row-header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #fafafa;
+    padding: 0 50px;
+}
+
+#row-header .col-md-4 {
+    text-align: center;
+}
+
+#row-header .col-md-5 {
+    margin-left: auto;
+}
+
+#row-header .col-md-3 {
+    padding-left: 50px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.menu-list {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.icons {
+    margin-left: 20px;
+}
+
+.icon-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+.hero-section {
+    background-image:
+        linear-gradient(rgba(240, 240, 240, 0.7), rgba(240, 240, 240, 0.7)),
+        url('https://ciri.la-studioweb.com/wp-content/uploads/2022/09/404-bg.jpg');
+    height: 1000px;
+    background-position: center;
+    
+}
+
+.hero-content {
+    text-align: center;
+    padding: 400px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.hero-content button {
+    font-size: 15px;
+    background-color: black;
+    color: #fafafa;
+    padding: 15px;
+    border-radius: 5%;
+}
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bestsl-section {
+    padding: 50px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+     width: 100%;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section-header a {
+    text-decoration: none;
+    color: black;
+}
+
+.row-bestsl {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; 
+}
+
+.col-md-3 {
+    flex: 0 0 25%; /* luôn chiếm 25% 1 hàng */
+    padding: 15px;
+    box-sizing: border-box;
+}
+.col-md-6{
+     flex: 0 0 50%;
+}
+.picProd {
+    width: 100%;
+    height: 250px;        
+    object-fit: cover;    
+    display: block;
+    border-radius: 5px;
+
+}
+
+.product-info {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+.row-arrival{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; 
+}
+.col-md-4 {
+    flex: 0 0 33.3%; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+.picArrival {
+    width: 100%;
+            
+    object-fit: cover;    
+    display: block;
+    border-radius: 5px;
+
+}
+.arrival-section .container{
+    height: 1100px;
+}
+.arrival-section{
+    padding: 40px;
+    background-color: #fafafa;
+}
+.a, .e{
+height: 700px;
+padding-bottom:20px ;
+}
+.b,.f{
+    height: 290px;
+}
+.c{
+    height: 490px;
+padding-bottom:20px ;
+}
+.d{
+    height: 500px;
+}
+.row-two-piece .col-md-3{
+    display: flex;
+}
+
+.two-piece-section .product-card {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+
+.product-images-wrapper {
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 15px; 
+}
+
+
+.product-piece-image {
+    width: 50%; 
+    flex-grow: 1; /* Để ảnh tự co giãn lấp đầy không gian */
+    object-fit: cover;
+    border-radius: 5px;
+    aspect-ratio: 1 / 1.2; /* Giữ tỉ lệ ảnh cao và hẹp, có thể điều chỉnh */
+}
+
+
+.row-two-piece {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; 
+}
+.two-piece-section{
+    padding: 30px;
+}
+/* 3 */
+.row-threeprod-piece{
+     padding: 30px;
+}
+.row-threeprod-piece .col-md-3{
+    display: flex;
+}
+
+.three-piece-section .threeprod-card {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+
+.product-images-wrapper {
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 15px; 
+}
+
+
+.threeprod-piece-image {
+    width: 33%; 
+    flex-grow: 1; 
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+
+.row-threeprod-piece {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; 
+}
+.three-piece-section{
+    padding: 30px;
+}
+.subscribes .row{
+ display: flex;
+}
+.subscribes{
+    background-image:
+        linear-gradient(rgba(48, 45, 45, 0.7), rgba(134, 131, 131, 0.7)),
+        url('https://ciri.la-studioweb.com/wp-content/uploads/2022/09/404-bg.jpg');
+    height: 200px;
+   
+
+    
+}
+.subscribes .row{
+    align-items: center;
+     padding: 80px;
+     height:200px;
+}
+.subscribes-ct{
+color: #fafafa;
+padding-left: 290px;
+.subscribe-form{
+    display: flex;
+}
+}
+.email-input{
+    width: 330px;
+    height:30px;
+    border: 0;
+    border-radius: 0;
+    padding-left: 10px;
+    
+}
+.subscribe-button{
+    background-color: #cdbb88;
+    border: 0;
+    height: 30px;
+    width: 30px;
+
+}
+.subscribe-form{
+    display: flex;
+    flex:1;
+    max-width: 400px;
+}
+
+
+.site-footer {
+    background-color: #0c0d14;
+    color: #a9a9a9;
+    padding: 50px 0;
+    text-align: center; 
+}
+
+
+.main-footer {
+    display: flex;
+    gap: 30px; 
+    margin-bottom: 40px;
+    text-align: left; 
+}
+
+
+.main-footer h3 {
+    color: #fafafa;
+    margin-bottom: 15px;
+}
+
+
+.social-media-widget a {
+    color: #fafafa;
+    font-size: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #333;
+    margin-bottom: 30px;
+}
+
+
+.sub-footer a {
+    color: #fafafa;
+    text-decoration: none;
+    margin: 0 10px; 
+}
+.footer-bottom {
+    margin-top: 30px; 
+}
+.about-us-widget{
+    padding-left: 200px;
+}
+section {
+    display: block;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+    #row-header {
+        padding: 0 20px;
+    }
+    #row-header .menu-list {
+        gap: 20px;
+    }
+    .hero-content {
+        padding: 150px 20px;
+    }
+    .about-us-widget {
+        padding-left: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Header */
+    #row-header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .menu-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Hero */
+    .hero-content {
+        padding: 100px 20px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* Product grids */
+    .col-md-3 {
+        flex: 0 0 50%;
+        padding: 10px;
+    }
+    .col-md-4 {
+        flex: 0 0 100%;
+    }
+
+    /* Subscribe */
+    .subscribes .row {
+        flex-direction: column;
+    }
+    .subscribe-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .email-input {
+        width: 100%;
+    }
+
+    /* Footer */
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-us-widget {
+        padding-left: 0;
+    }
+}
