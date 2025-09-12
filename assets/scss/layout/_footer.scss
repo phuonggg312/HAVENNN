@@ -1,0 +1,84 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+.site-footer {
+  background-color: v.$color-bg-footer;
+  color: v.$color-text-gray;
+  padding: v.$spacing-xxl 0;
+  text-align: center;
+
+  .main-footer {
+    @include m.flexbox($align: center, $gap: v.$spacing-xl); 
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 250px;
+
+    .col-md-6 {
+      flex: 0 0 50%; 
+    }
+
+    h3 {
+      color: v.$color-light;
+      margin-bottom: v.$spacing-md;
+    }
+
+    .social-media-widget a {
+      color: v.$color-light;
+      font-size: 20px;
+      margin: 0 v.$spacing-xs; 
+      text-decoration: none;
+    }
+  }
+
+  .footer-divider {
+    border: none;
+    height: 1px;
+    background-color: v.$color-border;
+    margin-bottom: v.$spacing-xl;
+  }
+
+  .sub-footer {
+    a {
+      color: v.$color-light;
+      text-decoration: none;
+      margin: 0 v.$spacing-sm;
+    }
+  }
+
+  .footer-bottom {
+    margin-top: v.$spacing-xl;
+  }
+  
+  // Responsive cho mobile
+@media (max-width: v.$bp-mobile) {
+    padding: 28px 0;
+    text-align: left; 
+    
+    .container {
+      margin: 0;
+      width: 100%;
+    }
+    
+    .main-footer {
+      flex-direction: column;
+      margin-bottom: v.$spacing-lg;
+      gap: v.$spacing-xl;
+      align-items: flex-start;
+      padding-left: 0; 
+    }
+
+    .footer-divider {
+      margin: 16px 0;
+    }
+
+    .sub-footer {
+      
+      @include m.flexbox(flex-start, stretch, $gap: 12px);
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+      margin-top: v.$spacing-lg;
+    }
+}
+}

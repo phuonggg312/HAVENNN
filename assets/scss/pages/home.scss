@@ -1,0 +1,186 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+// --- Hero Section ---
+.hero-section {
+  background-image:
+    linear-gradient(v.$color-overlay-light, v.$color-overlay-light),
+    url('https://ciri.la-studioweb.com/wp-content/uploads/2022/09/404-bg.jpg');
+  height: 900px;
+  max-height: 100%;
+  background-position: center;
+  object-fit: cover;
+
+  .hero-content {
+    text-align: center;
+    padding: 400px 300px;
+    
+    h1 {
+      font-size: 50px;
+      margin-bottom: v.$spacing-md;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: v.$spacing-md;
+    }
+    button {
+      font-size: 15px;
+      background-color: v.$color-dark;
+      color: v.$color-light;
+      padding: v.$spacing-md;
+      border-radius: 5%;
+    }
+  }
+  
+  @media (max-width: v.$bp-tablet) {
+    .hero-content {
+      padding: 300px v.$spacing-lg;
+    }
+  }
+}
+
+
+.section-header {
+  @include m.flexbox(space-between, center);
+  margin-bottom: v.$spacing-xl;
+  width: 100%;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+    color: v.$color-dark;
+  }
+}
+
+.product-info {
+  text-align: center;
+  padding: v.$spacing-md 0;
+  p {
+    margin: v.$spacing-xs 0;
+  }
+}
+
+.mb-2 {
+  margin-bottom: v.$spacing-lg;
+  @media (max-width: v.$bp-mobile) {
+    margin-bottom: v.$spacing-sm;
+  }
+}
+
+// --- Best Sellers Section ---
+.bestsl-section {
+  padding: v.$spacing-xxl 0;
+
+  .row-bestsl {
+    @include m.flexbox;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+
+  .col-md-3 {
+    flex: 0 0 25%;
+    padding: v.$spacing-md;
+  }
+  
+  .picProd {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: v.$border-radius-main;
+  }
+  
+  @media (max-width: v.$bp-tablet) {
+    .col-md-3 {
+      flex: 0 0 50%;
+      padding: v.$spacing-sm;
+    }
+  }
+}
+
+// --- Arrival Section ---
+.arrival-section {
+  .row-arrival {
+    @include m.flexbox(flex-start, flex-start, $gap: v.$spacing-lg);
+    flex-wrap: wrap;
+  }
+
+  .col-main {
+    @include m.flexbox($direction: column);
+    flex-grow: 1;
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      max-width: calc((100% - #{v.$spacing-lg} * 2) / 3);
+    }
+  }
+  
+  .picArrival {
+    width: 100%;
+    object-fit: cover;
+    border-radius: v.$border-radius-main;
+    display: block;
+    &.large-img { height: 450px; }
+    &.small-img { height: 250px; }
+  }
+
+  @media (max-width: v.$bp-mobile) {
+    .row-arrival {
+      gap: v.$spacing-sm;
+    }
+    .picArrival {
+      &.large-img { height: 200px; }
+      &.small-img { height: 100px; }
+    }
+  }
+}
+
+
+.two-piece-section, .three-piece-section {
+  padding: v.$spacing-xl;
+  
+  .row-two-piece, .row-threeprod-piece {
+    @include m.flexbox;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+
+  .col-md-3 {
+    flex: 0 0 25%;      
+    padding: v.$spacing-md; 
+  }
+  
+  .product-card, .threeprod-card {
+    @include m.flexbox($direction: column);
+    width: 100%;
+  }
+
+  .product-images-wrapper {
+    @include m.flexbox($gap: v.$spacing-sm);
+    margin-bottom: v.$spacing-md;
+  }
+  
+  .product-piece-image {
+    width: 50%;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: v.$border-radius-main;
+    aspect-ratio: 1 / 1.2;
+  }
+  
+  .threeprod-piece-image {
+    width: 33.33%;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: v.$border-radius-main;
+  }
+  
+  // Responsive cho tablet
+  @media (max-width: v.$bp-tablet) {
+    .col-md-3 {
+      flex: 0 0 50%;
+      padding: v.$spacing-sm;
+    }
+  }
+}

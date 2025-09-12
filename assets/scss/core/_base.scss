@@ -1,0 +1,27 @@
+@use 'variables' as v;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: v.$font-primary;
+}
+
+html, body {
+  max-width: 100%;
+}
+
+section {
+  display: block;
+}
+
+.container {
+  max-width: v.$container-width;
+  margin: 0 auto;
+  padding: 0 v.$spacing-lg;
+
+  @media (max-width: v.$bp-mobile) {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+}

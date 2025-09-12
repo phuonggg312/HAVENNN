@@ -1,0 +1,87 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+.subscribes {
+  background-image:
+    linear-gradient(v.$color-overlay-dark, v.$color-overlay-dark),
+    url('https://ciri.la-studioweb.com/wp-content/uploads/2022/09/404-bg.jpg');
+  height: 200px;
+
+  .row {
+    @include m.flexbox(stretch, center);
+    padding: 80px;
+    height: 100%;
+  }
+
+  .subscribes-ct {
+    color: v.$color-light;
+    padding-left: 200px;
+  }
+
+  .subscribe-form {
+    @include m.flexbox;
+    flex: 1;
+    max-width: 400px;
+    padding-left: 20px;
+  }
+
+  .email-input {
+    width: 330px;
+    height: 30px;
+    border: 0;
+    border-radius: 0;
+    padding-left: v.$spacing-sm;
+  }
+
+  .subscribe-button {
+    background-color: v.$color-accent;
+    border: 0;
+    height: 30px;
+    width: 30px;
+  }
+
+  // Responsive
+  @media (max-width: v.$bp-tablet) {
+    .row {
+      flex-direction: column;
+      text-align: left;
+      padding: v.$spacing-lg;
+    }
+    .subscribes-ct {
+      text-align: left;
+      padding-left: 0;
+      margin-top: v.$spacing-sm;
+      h2 { font-size: 24px; }
+      p { font-size: 15px; }
+    }
+    .subscribe-form {
+      max-width: 350px;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: v.$bp-mobile) {
+    height: auto;
+    padding: 24px 0;
+    background-size: cover;
+    background-position: center;
+
+    .row {
+      align-items: flex-start;
+      gap: 12px;
+      padding: 30px 12px;
+    }
+
+    .subscribes-ct {
+      padding: 0;
+      margin: 0;
+    }
+    
+    .subscribe-form {
+      width: 100%;
+      max-width: none;
+    
+    }
+  }
+}

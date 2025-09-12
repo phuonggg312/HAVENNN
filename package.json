@@ -1,0 +1,16 @@
+{
+  "name": "haven",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/scss/style.scss assets/css/style.css",
+    "sass:watch": "sass --watch assets/scss/style.scss assets/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.92.1"
+  }
+}
